@@ -63,7 +63,7 @@ author:
   bio    : "Datas will tell  you Truth."
   links:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linked-in"
+      icon: "fab fa-linked-in"
       url: "https://www.linkedin.com/in/devyulbae/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
