@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: devyulba Blog
+email: devyulbae@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -52,40 +52,40 @@ include:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-gistlinks:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Seongyul Bae"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Datas will tell  you Truth."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linked-in"
+      url: "https://www.linkedin.com/in/devyulbae/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/devyulbae"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/xyul_00"
+      label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linked-in"
+      url: "https://www.linkedin.com/in/devyulbae/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/devyulbae"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/xyul_00"
 
 defaults:
   # _posts
