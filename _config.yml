@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Seongyul Bae"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Datas will tell  you Truth."
+  bio    : "Studying AI / ML / DS"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
