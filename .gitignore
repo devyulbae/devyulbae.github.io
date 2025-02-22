@@ -32,4 +32,4 @@ Thumbs.db
 .env.*
 
 # 이미지 파일
-assets/images/ 
+# assets/images/ 
