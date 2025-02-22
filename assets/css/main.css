@@ -531,32 +531,32 @@ a:hover {
 
 /* 홈페이지 스타일 */
 .home-container {
-    width: calc(100% - 250px);  /* 사이드바 너비(250px)를 고려한 너비 설정 */
-    padding: 1rem;
-    margin-left: auto;  /* 오른쪽 정렬 */
+    width: 90%;  /* 95%에서 90%로 줄임 */
+    margin: 0 auto;
+    padding: 0 2rem 0 0;
 }
 
 /* GitHub 섹션 */
 .github-section {
     width: 100%;
-    margin-bottom: 4rem;
-    padding: 1.5rem;
+    margin-bottom: 2.5rem;  /* 3rem에서 2.5rem으로 줄임 */
+    padding: 0.8rem 1.5rem 0.8rem 0.8rem;  /* 패딩 축소 */
     overflow: hidden;
 }
 
 .github-section h2 {
-    margin-bottom: 2rem;
-    color: #FFD700;
-    font-size: 2.2rem;
+    font-size: 1.8rem;  /* 2.2rem에서 1.8rem으로 줄임 */
     font-weight: 700;
+    color: #FFD700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;  /* 2rem에서 1.5rem으로 줄임 */
 }
 
 /* GitHub Calendar 커스텀 스타일 */
 .calendar {
     width: 100%;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;  /* 0.85rem에서 0.8rem으로 줄임 */
 }
 
 .js-calendar-graph-svg {
@@ -631,11 +631,11 @@ a:hover {
 }
 
 .popular-posts h2 {
-    color: #FFD700;
-    font-size: 2.2rem;
+    font-size: 1.8rem;  /* 2.2rem에서 1.8rem으로 줄임 */
     font-weight: 700;
+    color: #FFD700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;  /* 2rem에서 1.5rem으로 줄임 */
 }
 
 .posts-grid {
@@ -645,11 +645,12 @@ a:hover {
 }
 
 .post-card {
-    padding: 1.5rem;
+    padding: 1rem;  /* 패딩 축소 */
     background: var(--bg-secondary);
     border-radius: 12px;
     transition: transform 0.2s ease;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
 }
 
 .post-card:hover {
@@ -657,8 +658,8 @@ a:hover {
 }
 
 .post-title {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;  /* 제목 크기 축소 */
+    margin-bottom: 0.8rem;
 }
 
 .post-title a {
@@ -685,25 +686,25 @@ a:hover {
 }
 
 .post-excerpt {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;  /* 본문 크기 축소 */
+    line-height: 1.5;
 }
 
-/* 반응형 디자인 수정 */
+/* 반응형 디자인 */
 @media (max-width: 768px) {
     .home-container {
-        width: 100%;  /* 모바일에서는 전체 너비 사용 */
-        padding: 0.5rem;
+        width: 100%;
+        padding: 0 0.8rem;
     }
     
-    .calendar {
-        font-size: 0.8rem;
+    .github-section h2,
+    .popular-posts h2 {
+        font-size: 1.5rem;
     }
     
     .github-section,
     .popular-posts {
-        padding: 1rem;
+        padding: 0.8rem;
     }
 }
 
@@ -730,32 +731,13 @@ a:hover {
     width: 0;
 }
 
-/* 홈 컨테이너 */
-.home-container {
-    width: 95%;
-    margin: 0 auto;
-    padding: 0 2rem 0 0;  /* 오른쪽 패딩 추가 */
-}
-
 /* GitHub 섹션과 Popular Posts 섹션 */
 .github-section,
 .popular-posts {
     width: 100%;
-    margin-bottom: 3rem;
-    padding: 1rem 2rem 1rem 1rem;  /* 오른쪽 패딩 추가 */
+    margin-bottom: 2.5rem;  /* 3rem에서 2.5rem으로 줄임 */
+    padding: 0.8rem 1.5rem 0.8rem 0.8rem;  /* 패딩 축소 */
     overflow: hidden;
-}
-
-/* Calendar */
-.calendar {
-    width: 100%;
-    margin: 0;
-    font-size: 0.85rem;
-}
-
-.js-calendar-graph-svg {
-    width: 100%;
-    height: auto;
 }
 
 /* 반응형 디자인 */
@@ -799,11 +781,11 @@ h2 {
 /* GitHub Contributions와 Popular Posts 제목은 예외적으로 처리 */
 .github-section h2,
 .popular-posts h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;  /* 2.2rem에서 1.8rem으로 줄임 */
     font-weight: 700;
     color: #FFD700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;  /* 2rem에서 1.5rem으로 줄임 */
 }
 
 /* 반응형 대응 */
@@ -814,7 +796,7 @@ h2 {
     
     .github-section h2,
     .popular-posts h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
