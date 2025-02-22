@@ -2,9 +2,16 @@
     --bg-primary: #1a1a1a;
     --bg-secondary: #252525;
     --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --accent-color: #4a9eff;
+    --text-secondary: #888888;
+    --accent-color: #FFD700;
     --border-color: #333333;
-    --link-color: #66b3ff;
-    --link-hover: #99ccff;
+    --link-color: #FFD700;
+    --link-hover-color: #FFC000;
+    --code-bg: #2d2d2d;
+    --code-color: #ff6b6b;
+    --blockquote-border: #FFD700;
+    --table-border: #333333;
+    --table-stripe: #252525;
+    --scrollbar-thumb: #444444;
+    --scrollbar-track: #1a1a1a;
 } 
