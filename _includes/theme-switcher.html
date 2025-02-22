@@ -1,10 +1,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // config에서 설정한 default 테마 가져오기 (없으면 'dark'로 설정)
-    const defaultTheme = '{{ site.theme_config.default }}' || 'dark';
+    // config에서 설정한 default_theme 가져오기 (없으면 'dark'로 설정)
+    const defaultTheme = '{{ site.theme_config.default_theme }}' || 'dark';
     
-    // localStorage에 저장된 테마가 없으면 default 테마 사용
-    const savedTheme = localStorage.getItem('theme');
+    // localStorage에 저장된 테마가 없으면 default_theme 사용
+    const savedTheme = localStorage.getItem('default_theme');
     const themeToApply = savedTheme || defaultTheme;
     
     // data-theme 속성 설정
@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleTheme() {
-    const themes = ['dark', 'light', 'blue', 'neon'];  // dark를 첫 번째로 이동
+    const themes = ['dark', 'light', 'blue', 'neon'];
     const currentTheme = document.documentElement.getAttribute('data-theme');
     
-    // 현재 테마의 인덱스를 찾고 다음 테마로 전환
     let currentIndex = themes.indexOf(currentTheme);
-    if (currentIndex === -1) currentIndex = 0;  // 잘못된 테마가 설정되어 있으면 dark로 시작
+    if (currentIndex === -1) currentIndex = 0;
     
     const nextIndex = (currentIndex + 1) % themes.length;
     const newTheme = themes[nextIndex];

@@ -41,6 +41,8 @@
 # 사이트 기본 설정
 title: 당신의 블로그 제목
 description: 블로그 설명
+default_theme: dark # 기본 테마 설정 ( dark, light, blue, neon 중 선택)
+( local에서 진행 시 테마를 바꾸면 서버를 다시 serve해야 합니다.)
 
 # 프로필 정보
 author:

@@ -41,8 +41,7 @@ defaults:
 
 # 테마 설정
 theme_config:
-  default: dark    # 기본 테마 (dark, light, neon, blue 중 선택)
-  alternate: light # 대체 테마 (dark, light, neon, blue 중 선택)
+  default_theme: dark    # 기본 테마 (dark, light, neon, blue 중 선택)
 
 # Include 설정 추가
 include:
