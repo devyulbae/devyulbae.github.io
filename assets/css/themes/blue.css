@@ -1,0 +1,13 @@
+:root[data-theme="blue"] {
+    --bg-primary: #001830;
+    --bg-secondary: #002745;
+    --text-primary: #ffffff;
+    --text-secondary: #b3d9ff;
+    --accent-color: #0088ff;
+    --border-color: #004080;
+    --code-bg: #002745;
+    --link-color: #66b3ff;
+    --link-hover: #99ccff;
+    --header-bg: #001830;
+    --footer-bg: #001830;
+} 

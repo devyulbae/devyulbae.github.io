@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="{{ site.theme_config.default }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/themes/dark.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/themes/light.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/themes/neon.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/themes/blue.css' | relative_url }}">
+    {% include theme-switcher.html %}
+</head>
+<body>
+    <div class="layout">
+        <header class="header">
+            {% include header.html %}
+        </header>
+        
+        <div class="main-container">
+            <aside class="left-sidebar">
+                {% include sidebar-profile.html %}
+            </aside>
+            
+            <main class="main-content">
+                {{ content }}
+            </main>
+        </div>
+        
+        <footer class="footer">
+            {% include footer.html %}
+        </footer>
+    </div>
+</body>
+</html> 

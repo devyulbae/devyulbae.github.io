@@ -1,0 +1,20 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultTheme = '{{ site.theme_config.default }}' || 'dark';
+    const savedTheme = localStorage.getItem('theme') || defaultTheme;
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    console.log('Initial theme:', savedTheme);
+});
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    // 현재 테마가 dark면 light로, light면 dark로 전환
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    console.log('Switching from', currentTheme, 'to', newTheme);
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+</script>

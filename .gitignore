@@ -1,4 +1,35 @@
-_site
-.sass-cache
+# Jekyll 빌드 출력
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
+
+# 번들러 설정
+.bundle/
+vendor/
 Gemfile.lock
+
+# 운영체제 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 설정
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 로그 파일
+*.log
+
+# 환경 설정
+.env
+.env.*
+
+# 이미지 파일
+assets/images/ 

@@ -1,0 +1,819 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 레이아웃 */
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 */
+.header {
+    height: 60px;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-brand a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+/* 메인 컨테이너 */
+.main-container {
+    flex: 1;
+    display: flex;
+}
+
+/* 왼쪽 사이드바 */
+.left-sidebar {
+    width: 250px;
+    min-width: 250px;
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* 푸터 */
+.footer {
+    height: 60px;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* 프로필 스타일 */
+.profile-section {
+    text-align: left;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #FFD700;
+}
+
+.profile-name {
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+
+.profile-bio {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.2em;
+}
+
+/* 카테고리 섹션 */
+.categories-section {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+}
+
+.categories-list li {
+    margin: 10px 0;
+}
+
+.categories-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+/* 전역 타이포그래피 */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 링크 스타일 */
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* 카테고리와 태그 페이지 스타일 */
+.category-group, .tag-group {
+    margin-bottom: 3rem;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.post-list small {
+    color: var(--text-secondary);
+    margin-left: 0.5rem;
+}
+
+/* 페이지 컨텐츠 스타일 */
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 네비게이션 링크 개선 */
+.nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* 사이드바 프로필 텍스트 크기 조정 */
+.profile-name {
+    font-size: 1.5rem;
+}
+
+.profile-bio {
+    font-size: 1.1rem;
+}
+
+.categories-list a {
+    font-size: 1.1rem;
+}
+
+/* 태그 페이지 스타일 수정 */
+.tag-group h2 {
+    font-size: 1.5rem;  /* 2rem에서 1.5rem으로 줄임 */
+    margin: 1.5rem 0 1rem 0;
+    color: var(--text-primary);
+}
+
+/* About 페이지 새로운 스타일 */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.about-header {
+    position: relative;
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.about-avatar {
+    position: relative;
+    z-index: 2;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.about-avatar:hover {
+    transform: scale(1.05);
+}
+
+.about-name {
+    position: relative;
+    z-index: 2;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-title {
+    position: relative;
+    z-index: 2;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.about-social {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #FFD700;
+}
+
+.section-content {
+    padding: 2rem;
+    margin: 2rem 0;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    padding: 2rem;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card li {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    border-left: 2px solid #FFD700;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    bottom: -2rem;
+    width: 2px;
+    background: var(--accent-color);
+    opacity: 0.3;
+}
+
+.timeline-content {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.timeline-date {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.timeline-company {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .about-header {
+        padding: 3rem 1rem;
+    }
+    
+    .about-name {
+        font-size: 2.2rem;
+    }
+    
+    .section-content {
+        padding: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 테마 색상 변경 */
+:root {
+    --accent-color: #FFD700;  /* 골드 색상 */
+}
+
+/* 타임라인 도트 색상 */
+.timeline-dot {
+    background: var(--accent-color);
+}
+
+/* 스킬 카드 아이콘 색상 */
+.skill-icon {
+    color: var(--accent-color);
+}
+
+/* 날짜 텍스트 색상 */
+.timeline-date {
+    color: var(--accent-color);
+}
+
+/* 링크 호버 색상 */
+a:hover {
+    color: var(--accent-color);
+}
+
+/* 소셜 아이콘 호버 효과 */
+.social-icon:hover {
+    color: var(--accent-color);
+}
+
+/* 소셜 링크 호버 */
+.social-links a:hover {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 링크 호버 효과 */
+.nav-links a:hover {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 버튼 호버 효과 */
+.theme-toggle:hover {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 프로필 이미지 테두리 */
+.profile-image {
+    border: 4px solid #FFD700;  /* 골드 */
+}
+
+/* 타임라인 라인 색상 */
+.timeline-item {
+    border-left: 2px solid #FFD700;  /* 골드 */
+}
+
+/* 버튼 배경색 */
+.button {
+    background-color: #FFD700;  /* 골드 */
+}
+
+/* 강조 색상 */
+:root {
+    --accent-color: #FFD700;  /* 골드 */
+}
+
+/* 404 페이지 강조 색상 */
+.error-page h1 {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 홈으로 돌아가기 버튼 */
+.home-link {
+    background-color: #FFD700;  /* 골드 */
+}
+
+/* 스킬 카드 아이콘 */
+.skill-icon {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 타임라인 도트 */
+.timeline-dot {
+    background: #FFD700;  /* 골드 */
+}
+
+/* 날짜 텍스트 */
+.timeline-date {
+    color: #FFD700;  /* 골드 */
+}
+
+/* 홈페이지 스타일 */
+.home-container {
+    width: calc(100% - 250px);  /* 사이드바 너비(250px)를 고려한 너비 설정 */
+    padding: 1rem;
+    margin-left: auto;  /* 오른쪽 정렬 */
+}
+
+/* GitHub 섹션 */
+.github-section {
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.github-section h2 {
+    margin-bottom: 2rem;
+    color: #FFD700;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* GitHub Calendar 커스텀 스타일 */
+.calendar {
+    width: 100%;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.js-calendar-graph-svg {
+    width: 100%;
+    height: auto;
+}
+
+/* 캘린더 색상 커스터마이징 */
+:root {
+    --color-calendar-graph-day-bg: var(--bg-primary);
+    --color-calendar-graph-day-border: rgba(255, 215, 0, 0.1);
+    --color-calendar-graph-day-L1-bg: rgba(255, 215, 0, 0.2);
+    --color-calendar-graph-day-L2-bg: rgba(255, 215, 0, 0.4);
+    --color-calendar-graph-day-L3-bg: rgba(255, 215, 0, 0.6);
+    --color-calendar-graph-day-L4-bg: rgba(255, 215, 0, 0.8);
+}
+
+/* 캘린더 텍스트 스타일 */
+.calendar .contrib-number {
+    color: #FFD700 !important;
+    font-weight: 600;
+}
+
+.calendar .contrib-column {
+    padding: 1rem 0;
+}
+
+/* 호버 효과 강화 */
+.calendar .ContributionCalendar-day:hover {
+    stroke: #FFD700 !important;
+    stroke-width: 2px;
+    filter: brightness(1.1);
+}
+
+/* 툴팁 스타일 개선 */
+.calendar .contrib-tooltip {
+    background: var(--bg-secondary) !important;
+    border: 1px solid #FFD700 !important;
+    border-radius: 8px !important;
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* 통계 섹션 스타일 */
+.contrib-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.contrib-stats .contrib-number {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.contrib-stats .contrib-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 인기 게시물 섹션 */
+.popular-posts {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2rem;
+    overflow: hidden;  /* 넘치는 부분 숨김 */
+}
+
+.popular-posts h2 {
+    color: #FFD700;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.posts-grid {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.post-card {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+}
+
+.post-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.post-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #FFD700;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.post-category {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 반응형 디자인 수정 */
+@media (max-width: 768px) {
+    .home-container {
+        width: 100%;  /* 모바일에서는 전체 너비 사용 */
+        padding: 0.5rem;
+    }
+    
+    .calendar {
+        font-size: 0.8rem;
+    }
+    
+    .github-section,
+    .popular-posts {
+        padding: 1rem;
+    }
+}
+
+/* 전체 레이아웃 컨테이너 */
+.wrapper {
+    display: flex;
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+    padding: 2rem 1rem;
+}
+
+/* 메인 컨텐츠 영역 */
+.main-content {
+    flex: 1;
+    padding: 2rem 0 2rem 0;
+    width: 0;
+}
+
+/* 홈 컨테이너 */
+.home-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 2rem 0 0;  /* 오른쪽 패딩 추가 */
+}
+
+/* GitHub 섹션과 Popular Posts 섹션 */
+.github-section,
+.popular-posts {
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 1rem 2rem 1rem 1rem;  /* 오른쪽 패딩 추가 */
+    overflow: hidden;
+}
+
+/* Calendar */
+.calendar {
+    width: 100%;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.js-calendar-graph-svg {
+    width: 100%;
+    height: auto;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        width: 95%;
+        gap: 1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        padding: 1rem;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    
+    .home-container {
+        width: 100%;
+        padding: 0 1rem;  /* 모바일에서는 패딩 줄임 */
+    }
+    
+    .github-section,
+    .popular-posts {
+        padding: 1rem;  /* 모바일에서는 패딩 동일하게 */
+    }
+}
+
+/* 모든 h2 태그에 대한 스타일 통일 */
+h2 {
+    font-size: 1.5rem;  /* 더 작은 크기로 조정 */
+    font-weight: 600;   /* 약간 더 가벼운 무게 */
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* GitHub Contributions와 Popular Posts 제목은 예외적으로 처리 */
+.github-section h2,
+.popular-posts h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .github-section h2,
+    .popular-posts h2 {
+        font-size: 1.8rem;
+    }
+}

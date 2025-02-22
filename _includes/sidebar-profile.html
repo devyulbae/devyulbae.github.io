@@ -1,0 +1,29 @@
+<div class="sidebar-content">
+    <div class="profile">
+        <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}" class="profile-image">
+        <h2 class="profile-name">{{ site.author.name }}</h2>
+        <p class="profile-bio">{{ site.author.bio }}</p>
+        <div class="social-links">
+            {% if site.author.social.github %}
+            <a href="{{ site.author.social.github }}"><i class="fab fa-github"></i></a>
+            {% endif %}
+            {% if site.author.social.linkedin %}
+            <a href="{{ site.author.social.linkedin }}"><i class="fab fa-linkedin"></i></a>
+            {% endif %}
+            {% if site.author.social.instagram %}
+            <a href="{{ site.author.social.instagram }}"><i class="fab fa-instagram"></i></a>
+            {% endif %}
+        </div>
+    </div>
+    
+    {% if page.layout == 'post' %}
+    <div class="categories-section">
+        <h3>Categories</h3>
+        <ul class="categories-list">
+            {% for category in site.categories %}
+            <li><a href="/categories#{{ category[0] }}">{{ category[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div> 
