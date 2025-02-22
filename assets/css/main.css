@@ -817,3 +817,70 @@ h2 {
         font-size: 1.8rem;
     }
 }
+
+/* 포스트 컨테이너 스타일 */
+.post {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 2rem;  /* 좌우 여백 추가 */
+}
+
+/* 포스트 헤더 (제목, 날짜, 태그 등) */
+.post-header {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* 포스트 제목 */
+.post-title {
+    margin-bottom: 1rem;
+}
+
+/* 포스트 메타 정보 (날짜, 태그 등) */
+.post-meta {
+    margin-bottom: 2rem;
+}
+
+/* 포스트 내용 */
+.post-content {
+    width: 100%;
+}
+
+/* 포스트 내용의 요소들 */
+.post-content p,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content ul,
+.post-content ol,
+.post-content blockquote,
+.post-content pre,
+.post-content table {
+    margin-bottom: 1.5rem;
+}
+
+/* 코드 블록 */
+.post-content pre {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+/* 인용구 */
+.post-content blockquote {
+    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #FFD700;
+    background: var(--bg-secondary);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .post {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
