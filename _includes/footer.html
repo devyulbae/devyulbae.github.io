@@ -1,5 +1,28 @@
 <div class="footer-content">
-    <div class="copyright">
-        © {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.
+    <div class="footer-sections">
+        <div class="footer-row">
+            <div class="footer-social">
+                <div class="social-links">
+                    {% if site.author.social.github %}
+                    <a href="{{ site.author.social.github }}" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.author.social.linkedin %}
+                    <a href="{{ site.author.social.linkedin }}" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.author.social.instagram %}
+                    <a href="{{ site.author.social.instagram }}" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>© {{ site.time | date: '%Y' }} {{ site.author.name }} · Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a></p>
+            </div>
+        </div>
     </div>
 </div>

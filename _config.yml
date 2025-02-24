@@ -1,5 +1,5 @@
 # 기본 설정
-title: DevYulBae Tech
+title: DevYulBae
 description: AI/ML Engineer's Tech Blog
 url: "https://devyulbae.github.io"
 baseurl: ""
@@ -17,7 +17,12 @@ author:
 
 # 빌드 설정
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 permalink: /:categories/:title/
 
 # 플러그인 설정

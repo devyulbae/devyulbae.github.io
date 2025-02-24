@@ -42,13 +42,12 @@ layout: default
 <!-- GitHub Calendar CSS -->
 <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css"/>
 
-<!-- GitHub Calendar JavaScript -->
-<script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
-
 <!-- 커스텀 툴팁 div 추가 -->
 <div id="contribution-tooltip" class="contribution-tooltip" style="display: none;"></div>
 
-<!-- Calendar 초기화 스크립트 -->
+<!-- GitHub Calendar JavaScript -->
+<script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const tooltip = document.getElementById('contribution-tooltip');
@@ -56,48 +55,35 @@ layout: default
         // GitHub Calendar 초기화
         GitHubCalendar(".calendar", "{{ site.author.social.github | split: '/' | last }}", {
             responsive: true
-        });
-
-        // DOM 변화 감지를 위한 MutationObserver 설정
-        const observer = new MutationObserver((mutations, obs) => {
-            const days = document.querySelectorAll('rect.ContributionCalendar-day');
+        }).then(() => {
+            // 캘린더가 로드된 후에 이벤트 리스너 추가
+            const days = document.querySelectorAll('.ContributionCalendar-day');
             
-            if (days.length > 0) {
-                days.forEach(day => {
-                    day.addEventListener('mouseenter', (e) => {
-                        const count = day.getAttribute('data-count');
-                        const date = day.getAttribute('data-date');
+            days.forEach(day => {
+                day.addEventListener('mouseenter', (e) => {
+                    const count = day.getAttribute('data-count');
+                    const date = day.getAttribute('data-date');
+                    
+                    if (count && date) {
+                        const formattedDate = new Date(date).toLocaleDateString('ko-KR', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
                         
-                        if (count && date) {
-                            const formattedDate = new Date(date).toLocaleDateString('ko-KR', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                            });
-                            
-                            tooltip.textContent = `${formattedDate}: ${count}개의 기여`;
-                            tooltip.style.display = 'block';
-                            
-                            const rect = e.target.getBoundingClientRect();
-                            tooltip.style.left = `${rect.left + window.scrollX}px`;
-                            tooltip.style.top = `${rect.top + window.scrollY - 40}px`;
-                        }
-                    });
-
-                    day.addEventListener('mouseleave', () => {
-                        tooltip.style.display = 'none';
-                    });
+                        tooltip.textContent = `${formattedDate}: ${count}개의 기여`;
+                        tooltip.style.display = 'block';
+                        
+                        const rect = e.target.getBoundingClientRect();
+                        tooltip.style.left = `${rect.left + window.scrollX}px`;
+                        tooltip.style.top = `${rect.top + window.scrollY - 40}px`;
+                    }
                 });
-                
-                // 이벤트 리스너 추가 완료 후 observer 중지
-                obs.disconnect();
-            }
-        });
 
-        // calendar 요소의 변화 감지 시작
-        observer.observe(document.querySelector('.calendar'), {
-            childList: true,
-            subtree: true
+                day.addEventListener('mouseleave', () => {
+                    tooltip.style.display = 'none';
+                });
+            });
         });
     });
-</script> 
+</script>

@@ -7,7 +7,7 @@
     --border-color: #333333;
     --link-color: #00ff9d;
     --link-hover-color: #00cc7d;
-    --code-bg: #2d2d2d;
+    --code-bg: #1a1a2e;  /* 기본 네온 테마 배경색보다 살짝 어두운 색상 */
     --code-color: #ff6b6b;
     --blockquote-border: #00ff9d;
     --table-border: #333333;

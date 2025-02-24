@@ -16,14 +16,17 @@
         </div>
     </div>
     
-    {% if page.layout == 'post' %}
     <div class="categories-section">
         <h3>Categories</h3>
         <ul class="categories-list">
             {% for category in site.categories %}
-            <li><a href="/categories#{{ category[0] }}">{{ category[0] }}</a></li>
+            <li>
+                <a href="/categories#{{ category[0] }}">
+                    {{ category[0] }}
+                    <span class="post-count">({{ category[1].size }})</span>
+                </a>
+            </li>
             {% endfor %}
         </ul>
     </div>
-    {% endif %}
 </div> 

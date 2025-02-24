@@ -10,7 +10,7 @@
     /* 추가 색상 */
     --link-color: #3a7bd5;
     --link-hover-color: #2c5aa0;
-    --code-bg: #f8f9fa;
+    --code-bg: #f4f4f4;  /* 기본 라이트 테마 배경색보다 살짝 어두운 회색 */
     --code-color: #e83e8c;
     --blockquote-border: #3a7bd5;
     --table-border: #dee2e6;
