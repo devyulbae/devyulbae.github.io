@@ -5,8 +5,6 @@ categories: [Guide]
 tags: [code, syntax-highlighting, rouge]
 ---
 
-# 코드 하이라이팅 가이드
-
 블로그에서 코드를 보기 좋게 표시하는 방법을 알아봅시다.
 
 ## 1. 인라인 코드 표시하기

@@ -5,8 +5,6 @@ categories: [Guide]
 tags: [mathjax, mathematics, symbols]
 ---
 
-# 자주 사용하는 수학 기호 모음
-
 ## 1. 기본 연산자
 
 | LaTeX 코드 | 수식 |

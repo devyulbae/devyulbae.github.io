@@ -5,8 +5,6 @@ categories: [Guide]
 tags: [mathjax, mathematics, latex]
 ---
 
-# MathJax로 수식 작성하기
-
 블로그에서 수학 수식을 작성하는 방법을 알아봅시다.
 
 ## 1. 인라인 수식

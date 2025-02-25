@@ -5,8 +5,6 @@ categories: [Guide]
 tags: [image, markdown, assets]
 ---
 
-# 블로그에 이미지 추가하기
-
 이 포스트에서는 블로그에 이미지를 추가하고 관리하는 방법을 설명합니다.
 
 ## 1. 기본적인 이미지 추가

@@ -1,0 +1,11 @@
+/* GitHub Calendar 커스텀 스타일 */
+.calendar {
+    font-family: Helvetica, arial;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    min-height: 243px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ... 나머지 GitHub 캘린더 관련 스타일 ... */ 

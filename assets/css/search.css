@@ -1,0 +1,120 @@
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 1rem;
+}
+
+.search-header {
+    margin-top: rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#search-input {
+    padding-right: 2.5rem; /* 클리어 버튼을 위한 공간 */
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.search-result {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-result h2 {
+    margin-bottom: 0.5rem;
+}
+
+.search-result h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.search-result h2 a:hover {
+    color: var(--link-color);
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.post-meta span {
+    margin-right: 1rem;
+}
+
+.excerpt {
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.no-results {
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 2rem;
+}
+
+.search-result-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-result-title {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.search-result-context {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.search-result-context mark {
+    background-color: #BBBBBB;
+    opacity: 0.8;
+    padding: 0.1rem 0.2rem;
+    border-radius: 2px;
+}
+
+.search-result-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.clear-search {
+    position: absolute;
+    right: 0rem;
+    top: 45%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    display: none; /* 기본적으로 숨김 */
+}
+
+.clear-search:hover {
+    color: var(--text-color);
+} 

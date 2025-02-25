@@ -1,0 +1,30 @@
+---
+layout: default
+title: Search
+---
+
+<link rel="stylesheet" href="/assets/css/search.css">
+
+<div class="search-container">
+    <div class="search-header">
+        <h1>Search Posts</h1>
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="검색어를 입력하세요..."
+                aria-label="Search posts"
+            >
+            <button id="clear-search" class="clear-search" type="button" aria-label="Clear search">
+                ×
+            </button>
+        </div>
+    </div>
+
+    <div id="search-results">
+        <!-- 검색 결과가 여기에 표시됩니다 -->
+    </div>
+</div>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/assets/js/search.js"></script> 

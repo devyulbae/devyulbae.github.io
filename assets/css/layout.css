@@ -1,0 +1,39 @@
+/* 레이아웃 */
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    width: 0;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 1rem;
+    }
+} 

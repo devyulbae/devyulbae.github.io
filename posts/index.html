@@ -1,0 +1,25 @@
+---
+layout: default
+title: Posts
+---
+
+<link rel="stylesheet" href="/assets/css/posts.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+
+<div class="posts-container">
+    <h1>All Posts</h1>
+    <ul class="posts-list">
+        {% for post in site.posts %}
+        <li class="post-item">
+            <div class="post-content">
+                <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+                <p class="post-excerpt">
+                    {% assign excerpt = post.content | strip_html | replace: '$', '' | replace: '\\[', '' | replace: '\\]', '' | replace: '\\(', '' | replace: '\\)', '' %}
+                    {{ excerpt | truncate: 150 }}
+                </p>
+            </div>
+            <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

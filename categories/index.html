@@ -1,18 +1,18 @@
 ---
-layout: page
-permalink: /categories/
+layout: default
+title: Categories
 ---
 
-{% for category in site.categories %}
-<div class="category-group">
-    <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
-    <ul class="post-list">
-        {% for post in category[1] %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>({{ post.date | date: "%Y-%m-%d" }})</small>
-        </li>
+<link rel="stylesheet" href="/assets/css/categories.css">
+
+<div class="categories-container">
+    <h1>Categories</h1>
+    <div class="category-list">
+        {% for category in site.categories %}
+        <a href="/categories/{{ category[0] | slugify }}" class="category-item">
+            <span class="category-name">{{ category[0] }}</span>
+            <span class="post-count">{{ category[1].size }}</span>
+        </a>
         {% endfor %}
-    </ul>
-</div>
-{% endfor %} 
+    </div>
+</div> 

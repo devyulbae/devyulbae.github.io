@@ -1,0 +1,77 @@
+.categories-container,
+.category-posts-container {
+    max-width: 900px;
+    padding: 0.5rem;
+    margin-left: 50px; /* 사이드바 너비에 맞춤 */
+    width: calc(100% - 200px); /* 사이드바 너비를 제외한 너비 */
+    box-sizing: border-box;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-color: var(--link-color);
+}
+
+.category-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.post-count {
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+/* 카테고리 포스트 페이지 스타일 */
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.back-to-categories {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-to-categories:hover {
+    color: var(--link-color);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .categories-container,
+    .category-posts-container {
+        margin-left: 0;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}

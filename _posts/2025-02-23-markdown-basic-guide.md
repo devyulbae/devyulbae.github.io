@@ -5,8 +5,6 @@ categories: [Guide]
 tags: [markdown, writing]
 ---
 
-# 마크다운 기본 문법 가이드
-
 블로그 포스트를 작성할 때 사용하는 기본적인 마크다운 문법을 알아봅시다.
 
 ## 1. 제목 작성하기
