@@ -61,11 +61,6 @@
     margin-right: 1rem;
 }
 
-.post-content:hover {
-    color: var(--line-color);
-    opacity: 0.7;
-}
-
 .post-title {
     color: var(--accent-color);
     text-decoration: none;
@@ -86,6 +81,13 @@
     white-space: nowrap;
 }
 
+.MathJax_Preview {
+    display: none;
+}
+.MathJax {
+    border-right: none !important;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .posts-container {
@@ -94,3 +96,4 @@
         width: 100%;
     }
 }
+

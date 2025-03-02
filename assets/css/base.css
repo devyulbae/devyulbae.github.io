@@ -52,3 +52,10 @@ a:hover {
     margin: 0 auto;
     padding: 0 2rem 0 0;
 }
+
+.MathJax_Preview {
+    display: none;
+}
+.MathJax {
+    border-right: none !important;
+}
